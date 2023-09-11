@@ -1,0 +1,130 @@
+---
+title: "q1"
+author: "Aaron Krishnapillai"
+date: "2/1/2023"
+output: pdf_document
+---
+
+
+a)
+Let $P^*= (y_1 + b\dots y_N + b)$ where $b \in \mathbb{R}$
+\begin{align}
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(y_u+b-(\bar{y}+b)\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{\left(y_u+b-(\bar{y}+b)\right)}^2\right]^2} -3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(y_u+b-\bar{y}-b\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{\left(y_u+b-\bar{y}-b\right)}^2\right]^2} -3\\
+     \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^2\right]^2} -3 \\
+     \alpha(P^*) &= \alpha(P)
+\end{align}
+
+$\alpha(P)$ is location invariant 
+
+\newpage
+b)
+Let $P^*= (my_1\dots my_N)$ where $m > 0$
+\begin{align}
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(my_u-m\bar{y}\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{\left(my_u-m\bar{y}\right)}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(m\left(y_u-\bar{y}\right)\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{\left(m\left(y_u-\bar{y}\right)\right)}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{m^4\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[m^2\frac{1}{N}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{m^4\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{m^4\left[\frac{1}{N}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \alpha(P)
+\end{align}
+$\alpha(P)$ is scale invariant
+
+\newpage
+
+c)
+Let $P^*= (my_1 +b \dots my_N+b)$ where $m > 0$ and $b \in \mathbb{R}$
+\begin{align}
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(my_u+b-(m\bar{y}+b)\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{\left(my_u+b-(m\bar{y}+b)\right)}^2\right]^2} -3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(my_u+b-m\bar{y}-b\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{\left(my_u+b-m\bar{y}-b\right)}^2\right]^2} -3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(my_u-m\bar{y}\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{\left(my_u-m\bar{y}\right)}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(m\left(y_u-\bar{y}\right)\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{\left(m\left(y_u-\bar{y}\right)\right)}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{m^4\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\sigma^4}\\
+    \alpha(P^*) &= \frac{m^4\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[m^2\frac{1}{N}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{m^4\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{m^4\left[\frac{1}{N}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \alpha(P)
+\end{align}
+$\alpha(P)$ is location-scale invariant 
+
+\newpage
+
+d)
+Let $P^k = (y_1 \dots y_N, y_1 \dots y_N \dots y_1 \dots y_N ) = (x_1 \dots x_{kN})$ where the set is duplicated $k$ times
+
+\begin{align}
+    \alpha(P^*) &= \frac{\frac{1}{Nk}\sum_{u\in P^k}{\left(x_u-\bar{y}\right)}^4}{\left[\frac{1}{Nk}\sum_{u\in P^k}{(x_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{1}{Nk}\sum_{u\in P}{\left[k\left(y_u-\bar{y}\right]\right)}^4}{\left[\frac{1}{Nk}\sum_{u\in P}{\left[k(y_u-\bar{y})\right]}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{1}{Nk}\sum_{u\in P}{\left[k\left(y_u-\bar{y}\right]\right)}^4}{\left[\frac{1}{Nk}\sum_{u\in P}{\left[k(y_u-\bar{y})\right]}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{k}{Nk}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[\frac{k}{Nk}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[\frac{1}{N}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^k) &= \alpha(P)
+\end{align}
+
+$\alpha(P)$ is replication invariant 
+
+\newpage
+
+e)
+\begin{align}
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(my_u-m\bar{y}\right)}^4}{\left[\frac{1}{N-1}\sum_{u\in P}{\left(my_u-m\bar{y}\right)}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(m\left(y_u-\bar{y}\right)\right)}^4}{\left[\frac{1}{N-1}\sum_{u\in P}{\left(m\left(y_u-\bar{y}\right)\right)}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{m^4\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[m^2\frac{1}{N-1}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{m^4\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{m^4\left[\frac{1}{N-1}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[\frac{1}{N-1}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^*) &= \alpha(P)
+\end{align}
+
+
+\begin{align}
+    \alpha(P^k) &= \frac{\frac{1}{Nk}\sum_{u\in P^k}{\left(x_u-\bar{y}\right)}^4}{\left[\frac{1}{(N-1)k}\sum_{u\in P^k}{(x_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^k) &= \frac{\frac{1}{Nk}\sum_{u\in P}{\left[k\left(y_u-\bar{y}\right]\right)}^4}{\left[\frac{1}{(N-1)k}\sum_{u\in P}{\left[k(y_u-\bar{y})\right]}^2\right]^2}-3\\
+    \alpha(P^k) &= \frac{\frac{1}{Nk}\sum_{u\in P}{\left[k\left(y_u-\bar{y}\right]\right)}^4}{\left[\frac{1}{(N-1)k}\sum_{u\in P}{\left[k(y_u-\bar{y})\right]}^2\right]^2}-3\\
+    \alpha(P^k) &= \frac{\frac{k}{Nk}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[\frac{k}{(N-1)k}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^k) &= \frac{\frac{1}{N}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[\frac{1}{N-1}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3\\
+    \alpha(P^k) &= \alpha(P)
+\end{align}
+
+As we can see that it does not affect our answers to b) and d) and the both remain scale and replication invariant. This is because the standard deviation or variance is independent of the properties of scale invariance and replication invariance
+
+
+\newpage
+
+
+f)
+Let $P = (y_1, \dots, y_{N-1})$ and $P = (y_1, \dots, y_{N-1}, y)$
+\begin{align}
+     SC(y, a) &= N \left[ \alpha(P^*) - \alpha(P)\right] \\
+     SC(y, a) &= N\left[\frac{\frac{1}{N}\sum_{u\in P}\left[{\left[y_u-\frac{1}{N}(\sum_{u \in P}{y_u+y)} \right]}^4 +  
+     {\left[y-\frac{1}{N}(\sum_{u \in P}{y_u+y)} \right]^4}\right]}{\left[\frac{1}{N}\sum_{u\in P}\left[{\left[y_u-\frac{1}{N}(\sum_{u \in P}{y_u+y)} \right]}^2 +  
+     {\left[y-\frac{1}{N}(\sum_{u \in P}{y_u+y)} \right]^2}\right]\right]^2}-3 
+     - (\frac{\frac{1}{N-1}\sum_{u\in P}{\left(y_u-\bar{y}\right)}^4}{\left[\frac{1}{N-1}\sum_{u\in P}{(y_u-\bar{y})}^2\right]^2}-3) \right]\\
+\end{align}
+
+\newpage
+
+g)
+
+```{r}
+kurtosis <- function(x){((sum((x-mean(x))^4)/length(x))/(sum((x-mean(x))^2)/length(x))^2)-3}
+
+set.seed(341)
+pop <- rt(1000,10)
+y <- seq(-10,10, length.out=1000)
+
+sc = function(y.pop, y, attr) {
+  N <- length(y.pop) +1
+  sapply( y, function(y.new) { N*(attr(c(y.new, y.pop)) - attr(y.pop)) } )
+}
+
+plot(y, (sc(pop,y,kurtosis)), type = 'l',
+     main = "Sensitivity curve for the Kurtosis",
+     ylab="sensitivity")
+
+```
+
+The good thing it is location-scale invariant and replication invariant but it seems to be sensitive to outliers 
+
+\newpage
+
+h) location, scale, and location-scale invariance properties are desirable as it ensures the result of the comparison data that's shifted, scaled or both is unbiased. This can develop a consistency in conclusions. It will give us an accurate representation of dispersion in the data. If it is equivariance then it may lead to biased results and incorrect conclusions 
